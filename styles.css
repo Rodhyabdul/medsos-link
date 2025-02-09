@@ -1,0 +1,118 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
+  background: #28a745; /* Background hijau segar */
+  color: #fff; /* Warna teks putih */
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  text-align: center;
+  max-width: 600px;
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7); /* Latar belakang gelap transparan */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px #ffffff;
+}
+
+/* Banner Styling */
+.banner img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 15px;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 700; /* Font bold */
+  color: #FFB000; /* Judul dengan warna jingga */
+}
+
+header p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  font-weight: 500; /* Sedikit tebal */
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  font-weight: 600; /* Font sedikit tebal */
+  background: #00bcd4; /* Biru muda sebagai warna default tombol */
+}
+
+.social-link .icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.social-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: left 0.5s ease;
+}
+
+.social-link:hover::before {
+  left: 100%;
+}
+
+.social-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: #ff7f50; /* Hover berubah menjadi jingga */
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  font-weight: 500; /* Sedikit tebal */
+  color: #ffffff; /* Warna footer putih */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .social-link {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}
